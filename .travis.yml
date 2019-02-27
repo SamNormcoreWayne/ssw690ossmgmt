@@ -31,7 +31,13 @@ matrix:
       python: "3.7"
       install:
         - pip install -r requirements.txt
-        - pip install . 
+        - pip install coverage 
+      script: true 
+        - nosetests --with-coverage --coverage report
       script: 
         - pytest
+      after_script:
+        - coveralls
+      after_success:
+        - codecov
         
