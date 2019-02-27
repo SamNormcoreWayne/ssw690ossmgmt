@@ -26,18 +26,11 @@ matrix:
       script:
         - npm test
     - language: python
-      sudo: required
+  	  sudo: required
       dist: xenial
       python: "3.7"
-      install:
+    	install:
         - pip install -r requirements.txt
-        - pip install coverage 
-      script: true 
-        - nosetests --with-coverage --coverage report
-      script: 
+        - pip install . 
+      script: 	        
         - pytest
-      after_script:
-        - coveralls
-      after_success:
-        - codecov
-        
