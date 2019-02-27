@@ -12,5 +12,5 @@
 /captures
 .externalNativeBuild
 .idea/
-/.vs/*
-/node_modules/*
+gateway-test/.vs/
+gateway-test/node_modules/
