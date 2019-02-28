@@ -26,9 +26,7 @@ matrix:
       script:
         - npm test
     - language: python
-      matrix:
-        include:
-          - python: 3.7
+          - python: "3.7"
             dist: xenial
             sudo: reruired
           - python: pypy
