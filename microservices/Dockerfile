@@ -1,6 +1,4 @@
-FROM python:3.7
-
-MAINTAINER TaeminKim <flatcoke89@gmail.com>
+FROM python:3.5
 
 RUN apt-get update
 RUN apt-get install -y supervisor
@@ -9,7 +7,7 @@ RUN pip install uwsgi
 RUN mkdir -p /deploy/flatcoke
 RUN mkdir -p /deploy/log/uwsgi
 
-ADD . /deploy/flatcoke/
+ADD flask-structure-master /deploy/flatcoke/
 WORKDIR /deploy/flatcoke
 
 RUN pip install -r requirements.txt
